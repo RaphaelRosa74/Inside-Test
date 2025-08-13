@@ -1,0 +1,90 @@
+.app {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #e8efff);
+  min-height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.usersGrid {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding-bottom: 2rem;
+}
+
+/* Animação suave na entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card global (para quando usar UserCard) */
+.userCard {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.userCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+.userCard h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #1f2937;
+}
+
+.userCard p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.viewDetailsBtn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.viewDetailsBtn:hover {
+  background: linear-gradient(90deg, #2563eb, #0891b2);
+  transform: scale(1.05);
+}
+
+/* Responsividade extra para mobile */
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 1.6rem;
+  }
+  .userCard {
+    padding: 1rem;
+  }
+}

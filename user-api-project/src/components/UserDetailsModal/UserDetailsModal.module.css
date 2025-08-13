@@ -1,0 +1,62 @@
+/* src/components/UserDetailsModal/UserDetailsModal.module.css */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 90%;
+  width: 600px;
+  max-height: 70vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.modalTitle {
+  margin-top: 0;
+  color: #333;
+}
+
+.detailsSection {
+  margin-bottom: 1.5rem;
+}
+
+.detailsSection h3 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  color: #444;
+}
+
+.detailsSection p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 95%;
+    padding: 1rem;
+  }
+}
