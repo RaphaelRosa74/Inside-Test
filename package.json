@@ -2,7 +2,7 @@
   "name": "user-api-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://rapharosa74.github.io/inside-test",
+  "homepage": "https://rapharosa74.github.io/Inside-Test",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
